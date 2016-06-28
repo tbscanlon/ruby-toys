@@ -10,12 +10,8 @@ $seed = [
 def generate_password(number, length)
   number.times do
     password = []
-
-    length.times do
-      letter = $seed.sample
-      password.push(letter)
-    end
-      puts password.join("")
+    length.times { letter = $seed.sample; password.push(letter) }
+    puts password.join("")
   end
 end
 
